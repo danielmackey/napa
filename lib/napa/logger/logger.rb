@@ -22,7 +22,7 @@ module Napa
 
           @logger = Logging.logger["[#{name}]"]
           @logger.add_appenders(Logging.appenders.stdout('stdout',layout: Logging.layouts.json)) unless Napa.env.test?
-          @logger.add_appenders(Logging.appenders.file("log/#{Napa.env}.log", layout: Logging.layouts.json))
+          #@logger.add_appenders(Logging.appenders.file("log/#{Napa.env}.log", layout: Logging.layouts.json))
         end
 
         @logger
